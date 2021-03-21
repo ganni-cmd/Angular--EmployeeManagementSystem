@@ -1,0 +1,18 @@
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Employee details Updated successfully.</strong>
+    <button (click)="close()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<h2 class="text-center mt-5"> Update Employee</h2>
+<div class="container col-sm-6">
+    <form (ngSubmit)="onSubmit()" class="form-group">
+        <label for="fname">First name</label>
+        <input type="text" class="form-control" id="fname" name="firstName" [(ngModel)]="employee.firstName">
+        <label for="lname">Last name</label>
+        <input type="text" class="form-control" id="lname" name="lastName" [(ngModel)]="employee.lastName">
+        <label for="email">Email ID</label>
+        <input type="email" class="form-control" id="emailname" name="email" [(ngModel)]="employee.emailId">
+        <button type="submit" class="btn btn-primary mt-2 ">Update</button>
+    </form>
+</div>
